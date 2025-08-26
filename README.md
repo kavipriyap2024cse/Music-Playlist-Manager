@@ -16,7 +16,7 @@ It demonstrates the use of Object-Oriented Programming (OOP) concepts such as cl
 **Tech Stack**
 
 1.Language: Java
-2.Frontened: HTML,CSS,Javascript
-3.Backened: Java
+2.Frontened:Console-based (Java) / JavaFX
+3.Backened: Java classes and modules
 4.Database: SQL
 
