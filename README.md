@@ -20,3 +20,29 @@ It demonstrates the use of Object-Oriented Programming (OOP) concepts such as cl
 3.Backened: Java classes and modules
 4.Database: SQL
 
+**OOPS concept**
+Encapsulation
+
+Wrapping data (variables) and methods (functions) into a single unit (class).
+Protects data by providing controlled access using getters/setters.
+Example: In a Song class, attributes like title and artist are private, and accessed via methods.
+
+Abstraction
+
+Hiding internal details and showing only essential features.
+Achieved using abstract classes and interfaces in Java.
+Example: A Player interface may have methods like play() and pause(), but the internal logic is hidden.
+
+Inheritance
+
+Mechanism of acquiring properties and methods of one class into another.
+Promotes code reusability.
+Example: A Playlist class can inherit from a generic LibraryItem class.
+
+Polymorphism
+
+Ability of one function or object to take many forms.
+Two types:
+Compile-time (Overloading) – Same method name with different parameters.
+Runtime (Overriding) – Subclass provides its own implementation of a method.
+Example: play() method behaves differently for a single song vs. a playlist.
