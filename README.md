@@ -7,11 +7,17 @@ It demonstrates the use of Object-Oriented Programming (OOP) concepts such as cl
 
 **FEATURES**
 
-1.Add, remove, and update songs in a playlist
-2.Create and manage multiple playlists
-3.Search songs by title, artist, or genre
-4.Play songs sequentially or in shuffle mode
-5.Save and load playlists using file handling
+1Add, remove, and update songs in a playlist
+
+Create and manage multiple playlists
+
+Search songs by title, artist, or genre
+
+Play songs sequentially (next/previous/all) or in shuffle mode
+
+Sort songs by title, artist, or duration
+
+Save and load playlists using file handling
 
 **Tech Stack**
 
