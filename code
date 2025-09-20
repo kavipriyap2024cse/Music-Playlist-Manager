@@ -1,0 +1,55 @@
+import java.util.*;
+import java.io.*;
+
+public class MusicManager {
+    static class Song {
+        String title, artist, genre;
+        double duration;
+        Song(String t, String a, double d, String g) { title=t; artist=a; duration=d; genre=g; }
+        public String toString() { return title + " | " + artist + " | " + duration + " mins | " + genre; }
+    }
+
+    static List<Song> playlist = new ArrayList<>();
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        while(true) {
+            System.out.println("\n1.Add 2.Remove 3.Show 4.Shuffle 5.Search 6.PlayAll 0.Exit\nChoose:");
+            int c = Integer.parseInt(sc.nextLine());
+            switch(c) {
+                case 1: addSong(); break;
+                case 2: removeSong(); break;
+                case 3: showPlaylist(); break;
+                case 4: shufflePlaylist(); break;
+                case 5: searchSong(); break;
+                case 6: playAll(); break;
+                case 0: return;
+                default: System.out.println("Invalid");
+            }
+        }
+    }
+
+    static void addSong() {
+        System.out.print("Title: "); String t=sc.nextLine();
+        System.out.print("Artist: "); String a=sc.nextLine();
+        System.out.print("Duration: "); double d=Double.parseDouble(sc.nextLine());
+        System.out.print("Genre: "); String g=sc.nextLine();
+        playlist.add(new Song(t,a,d,g));
+        System.out.println("Added!");
+    }
+
+    static void removeSong() {
+        System.out.print("Title to remove: "); String t=sc.nextLine();
+        if(playlist.removeIf(s->s.title.equalsIgnoreCase(t))) System.out.println("Removed!");
+        else System.out.println("Not found.");
+    }
+
+    static void showPlaylist() { playlist.forEach(System.out::println); }
+    static void shufflePlaylist() { Collections.shuffle(playlist); System.out.println("Shuffled!"); }
+    static void searchSong() {
+        System.out.print("Search keyword: "); String k=sc.nextLine().toLowerCase();
+        playlist.stream().filter(s->s.title.toLowerCase().contains(k)||s.artist.toLowerCase().contains(k))
+                .forEach(System.out::println);
+    }
+    static void playAll() { playlist.forEach(s->System.out.println("Playing: "+s)); }
+}
